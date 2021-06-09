@@ -1,0 +1,145 @@
+$pad: 10px;
+
+.modal {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background: #00000050;
+  backdrop-filter: blur(10px);
+  top: 0;
+  left: 0;
+
+  .slide-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .css-0 {
+      position: absolute;
+      z-index: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .slide-image-wrapper {
+      position: relative;
+      height: max-content;
+      width: max-content;
+      transition: all 0.25s ease-in-out;
+      z-index: 10;
+      &:hover {
+        img {
+          z-index: 10;
+          filter: brightness(50%);
+        }
+
+        p {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+
+      p {
+        position: absolute;
+        color: #fff;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.25s ease-in-out;
+        font-size: 0.75rem;
+      }
+
+      .name {
+        top: $pad;
+        left: $pad;
+        font-weight: 600;
+        font-size: 1.25rem;
+      }
+      .bio {
+        top: $pad + 30px;
+        left: $pad;
+        font-weight: 400;
+        font-size: 0.8rem;
+        line-height: 0.8rem;
+      }
+      .date {
+        bottom: $pad;
+        right: $pad;
+      }
+      .likes {
+        bottom: $pad;
+        left: $pad;
+        display: flex;
+        align-items: center;
+        div {
+          margin-top: 5px;
+        }
+      }
+      &__loader {
+        z-index: 0;
+        position: absolute;
+        top: 50%;
+        left: 48%;
+      }
+    }
+
+    .lazy-load-image-background.blur.lazy-load-image-loaded > img {
+      max-width: 90vw;
+      max-height: 90vh;
+      box-shadow: 0 0 50px 0 #00000050;
+      transition: all 0.25s;
+      cursor: auto;
+      &:hover {
+        box-shadow: unset;
+        transform: unset;
+      }
+    }
+  }
+
+  .next,
+  .prev,
+  .close {
+    top: calc(50% - 20px);
+    position: absolute;
+    background: white;
+    border-radius: 30px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    z-index: 2;
+    transition: all 0.25s ease-in-out;
+    &:hover {
+      background: rgb(219, 219, 219);
+    }
+  }
+
+  .next {
+    right: 10px;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next,
+  .prev {
+    display: flex;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .close {
+    top: 10px;
+    right: 10px;
+  }
+}
