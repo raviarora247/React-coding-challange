@@ -20,9 +20,6 @@ const queryClient = new QueryClient({
 function App({ Component, pageProps, err }: AppProps & { err: any }) {
   return (
     <QueryClientProvider client={queryClient}>
-      {/* <div className='heading container' {...pageProps} err={err} >
-          <a href='/' ><h1>Splash Images.</h1></a>
-      </div> */}
       <Component />
     </QueryClientProvider>
   );
