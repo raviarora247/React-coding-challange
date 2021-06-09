@@ -34,7 +34,7 @@ const IndexPage: React.FC = () => {
       </Head>
       <div className="main-page-wrapper">
         <div className="heading">
-          TechGuilds Test <FaReact />
+          TechGuilds - React Coding Challenge <FaReact />
         </div>
         <div
           className="gallery-wrapper container"
