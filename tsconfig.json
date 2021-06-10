@@ -21,16 +21,17 @@
     "noFallthroughCasesInSwitch": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": false,
+    "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve"
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx", "babel.config.jsx",
+    "**/*.tsx",
+    "babel.config.jsx"
   ],
   "exclude": [
-    "node_modules",
+    "node_modules"
   ]
 }
