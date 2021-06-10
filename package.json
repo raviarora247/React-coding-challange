@@ -1,5 +1,5 @@
 {
-  "name": "react-coding-challenge",
+  "name": "splash-image",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,9 +9,9 @@
     "test": "jest"
   },
   "dependencies": {
-    "@babel/preset-env": "^7.14.4",
-    "@babel/preset-react": "^7.13.13",
+    "@babel/cli": "^7.0.0-beta.40",
     "@babel/preset-typescript": "^7.13.0",
+    "@babel/runtime": "^7.12.5",
     "@testing-library/react": "^11.2.7",
     "@types/body-scroll-lock": "^2.6.1",
     "@types/enzyme": "^3.10.8",
@@ -26,7 +26,7 @@
     "next": "10.2.3",
     "node-sass": "^4.14.1",
     "popmotion": "^9.3.6",
-    "react": "17.0.2",
+    "react": "^17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.2.0",
     "react-lazy-load-image-component": "^1.5.1",
@@ -37,6 +37,12 @@
     "swr": "^0.5.6"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-transform-async-to-generator": "^7.14.5",
+    "@babel/plugin-transform-runtime": "^7.14.5",
+    "@babel/preset-env": "^7.14.5",
+    "@babel/preset-react": "^7.14.5",
     "@testing-library/jest-dom": "^4.2.4",
     "@types/jest": "^26.0.23",
     "@types/node": "^15.12.2",
