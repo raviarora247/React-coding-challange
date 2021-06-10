@@ -1,6 +1,7 @@
 import '../styles/_app.scss';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import type { AppProps as NextAppProps } from "next/app";
+import React from "react";
 
 type AppProps<P = any> = {
   pageProps: P;
