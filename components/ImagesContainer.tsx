@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
 import ModalBox from './ModalBox';
 import { ImageProps } from '../types';
 
@@ -32,6 +31,7 @@ const ImagesContainer: React.FC<ImagesArrayProps> = ({imagesArray}) => {
                         return (
                             <div 
                                 key={index} 
+                                id="modal-btn"
                                 className={ image.height > image.width ? "portrait" : ""} 
                                 onClick={() => {
                                     setshowModal(true)
